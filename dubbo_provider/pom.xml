@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>dubbo_consumer</artifactId>
+	<artifactId>dubbo_server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>dubbo_consumer</name>
+	<name>dubbo_server</name>
 	<description>Demo project for Spring Boot</description>
 
 	 <parent>
@@ -22,9 +22,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-	</properties> 
+	</properties>
 
-	 <dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -48,12 +48,12 @@
         <scope>provided</scope>
 		</dependency>
 		
-		<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
- <dependency>
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> 
+		
+		 <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.4.10</version>
@@ -79,17 +79,44 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
             <version>0.1</version>
-        </dependency>
-       
+        </dependency> 
+       	
+       	<dependency>
+       			<groupId>com.example</groupId>
+				<artifactId>Interface</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+       	</dependency>
+       	
+       	
+       	<dependency>
+       		<groupId>com.example</groupId>
+			<artifactId>Mapper</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+       	</dependency>
+       	
+       	<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.40</version>
+		</dependency> 
+		
+		
 	</dependencies> 
-
-    
+	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>    
+        <groupId>org.apache.maven.plugins</groupId>    
+        <artifactId>maven-surefire-plugin</artifactId>    
+        <version>2.4.2</version>    
+        <configuration>    
+          <skipTests>true</skipTests>    
+        </configuration>    
+</plugin>   
 		</plugins>
 	</build>
 

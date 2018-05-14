@@ -5,7 +5,10 @@
 
     <dubbo:application name="dubbo-provider" owner="dubbo-provider"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181" check="false" subscribe="false"/>
-    <dubbo:service interface="com.example.service.TestService" ref="testService"/>
+    <dubbo:service interface="com.example.demo.service.TestService" ref="testService"/>
+    <dubbo:service interface="com.example.demo.service.PersonService" ref="personService"/>
+    
     <bean id="testService" class="com.example.service.impl.TestServiceImpl"></bean>
-
+ 	<bean id="personService" class="com.example.service.impl.PersonServiceImpl"></bean> 
+    
 </beans>

@@ -1,10 +1,14 @@
 package com.example.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
+@ComponentScan
+@MapperScan(basePackages = "com.example.demo.mapper")
 @ImportResource(value = {"classpath:providers.xml"})
 public class DubboProviderApplication {
 

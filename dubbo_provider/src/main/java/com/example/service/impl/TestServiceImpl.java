@@ -1,8 +1,8 @@
 package com.example.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
-import com.example.service.TestService;
-@Service(version = "1.0.1")
+
+import com.example.demo.service.TestService;
+
 public class TestServiceImpl implements TestService {
 
 	@Override
